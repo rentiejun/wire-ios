@@ -50,7 +50,7 @@
         [hockeyManager startManager];
         [hockeyManager.authenticator authenticateInstallation];
         
-        if (hockeyManager.crashManager.didCrashInLastSession && hockeyManager.crashManager.timeIntervalCrashInLastSessionOccurred < 5) {
+        if (hockeyManager.crashManager.didCrashInLastSession && hockeyManager.crashManager.timeIntervalCrashInLastSessionOccurred < 60) {
             DDLogError(@"HockeyIntegration: START Waiting for the crash log upload...");
             self.hockeyInitCompletion = completed;
             
